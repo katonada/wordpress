@@ -29,3 +29,13 @@ function translate_archive_month($list) {
 }
 
 add_filter('get_archives_link', 'translate_archive_month');
+
+
+
+/* include some script or style (/javascripts/enquire.js) */
+function wp_enquire_js(){
+    wp_register_script( 'wp-enquire-js', get_template_directory_uri() . '/javascripts/enquire.js');
+    wp_enqueue_script( 'wp-enquire-js' );
+}
+
+add_action('wp_enqueue_scripts', 'wp_enquire_js');
