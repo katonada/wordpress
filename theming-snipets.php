@@ -9,11 +9,11 @@
 
 <?php
     # get post link, title, excerpt ... from page, select page by ID
-	$home_page_post_id = 5; # O nama
-	$home_page_post = get_post( $home_page_post_id, ARRAY_A );
-	$content_link = $home_page_post['guid'];
-	$content_title = $home_page_post['post_title'];
-	$content_excerpt = $home_page_post['post_excerpt'];
+    $home_page_post_id = 5; # O nama
+    $home_page_post = get_post( $home_page_post_id, ARRAY_A );
+    $content_link = $home_page_post['guid'];
+    $content_title = $home_page_post['post_title'];
+    $content_excerpt = $home_page_post['post_excerpt'];
 ?>
 
 
