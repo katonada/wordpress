@@ -1,4 +1,4 @@
 wordpress
 =========
 
-wordpress functions - my reminder
+wordpress - my reminder
