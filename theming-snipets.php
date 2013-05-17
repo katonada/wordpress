@@ -17,7 +17,7 @@
 ?>
 
 <?php
-    # get post link, title, excerpt, image ... from page, select page by category ID
+    # get post link, title, excerpt, image ... from pages, select page by category ID
 	global $post;
 	$tmp_post = $post;
 	$args = array( 'category' => '5' );
