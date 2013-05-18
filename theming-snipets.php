@@ -1,19 +1,14 @@
-<?php
-    # get page content from page, select page by ID
-    $home_page_post_id = 101; # O nama
-    $home_page_post = get_post( $home_page_post_id, ARRAY_A );
-    $content_content = $home_page_post['post_content'];
-?>
-
-
 
 <?php
-    # get page link, title, excerpt ... from page, select page by ID
-    $home_page_post_id = 5; # O nama
-    $home_page_post = get_post( $home_page_post_id, ARRAY_A );
-    $content_link = $home_page_post['guid'];
-    $content_title = $home_page_post['post_title'];
-    $content_excerpt = $home_page_post['post_excerpt'];
+    # get page/post link, title, excerpt ... from page, select page by ID
+    $page_post_id = 5; # O nama
+    $page_post = get_post( $home_page_post_id, ARRAY_A );
+    $content_link = $page_post['guid'];
+    $content_title = $page_post['post_title'];
+    $content_excerpt = $page_post['post_excerpt'];    
+    $content_content = $page_post['post_content'];
+    $page_post_thumbnail_id = get_post_thumbnail_id( $page_post_id );
+	$featured_src = wp_get_attachment_image_src( $page_post_thumbnail_id, 'full' ); // full, thumbnail, medium, large
 ?>
 
 <?php
@@ -24,7 +19,7 @@
 	$myposts = get_posts( $args );
 	foreach( $myposts as $post ) :	setup_postdata($post); 
 		$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
-		$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'full' ); /* full image size */
+		$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'full' ); // full, thumbnail, medium, large
 ?>
     <img src="<?php echo $featured_src[0] ?>" alt="">
 
