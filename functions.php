@@ -58,3 +58,20 @@ function ad_filter_menu($sorted_menu_objects, $args) {
 
     return $sorted_menu_objects;
 }
+
+
+/* sidebars: 
+    to add more sidebars copy  and edit the sidebar code.    
+    copy the sidebar.php file and rename it to your sidebar's name.
+    So using the above example, it would be: sidebar-sidebar-en.php
+    
+*/
+register_sidebar(array(
+    'id' => 'sidebar-en', // lovercase wthout spaces
+    'name' => 'Main Sidebar EN',
+    'description' => 'Used on EN every page BUT the homepage page template.',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+));
