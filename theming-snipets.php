@@ -1,9 +1,8 @@
-
 <?php
     # get page/post link, title, excerpt ... from page, select page by ID
     $page_post_id = 5; # O nama
     $page_post = get_post( $home_page_post_id, ARRAY_A );
-    $content_link = $page_post['guid'];
+    $content_link = get_permalink($home_page_post_id);
     $content_title = $page_post['post_title'];
     $content_excerpt = $page_post['post_excerpt'];    
     $content_content = $page_post['post_content'];
